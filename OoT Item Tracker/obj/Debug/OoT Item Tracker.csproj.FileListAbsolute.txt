@@ -1,0 +1,10 @@
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\bin\Debug\OoT Item Tracker.exe.config
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\bin\Debug\OoT Item Tracker.exe
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\bin\Debug\OoT Item Tracker.pdb
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT_Item_Tracker.Properties.Resources.resources
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT Item Tracker.csproj.GenerateResource.Cache
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT Item Tracker.csproj.CoreCompileInputs.cache
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT Item Tracker.exe
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT Item Tracker.pdb
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT Item Tracker.csprojResolveAssemblyReference.cache
+C:\Users\Shade\source\repos\OoT Item Tracker\OoT Item Tracker\obj\Debug\OoT_Item_Tracker.OoT_Item_Tracker_GUI.resources

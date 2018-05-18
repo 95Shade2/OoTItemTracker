@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31D2D83A-5BBD-425A-9778-96D659E81FA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OoT_Item_Tracker</RootNamespace>
+    <AssemblyName>OoT Item Tracker</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Point.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty item screen - sony_000000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item screen_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuStick_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuNut_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bombs_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bow_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bow_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireArrows_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireArrows_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuStick_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuNut_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bombs_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slingshot_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boomerang_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bottle1_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuStick_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bottle_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FairyOcarina_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lens_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chus_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MagicBeans_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hookshot_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hammer_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IceArrows_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightArrows_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinsFire_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FW_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NayrusLove_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinsFire_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slingshot_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FairyOcarina_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chus_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hookshot_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IceArrows_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FW_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boomerang_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lens_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MagicBeans_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hammer_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightArrows_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NayrusLove_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bottle_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleScreen_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayNote_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightMed_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skulltula_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForestMed_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireMed_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaterMed_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiritMed_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShadowMed_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kokiri_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goron_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zora_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GerudoCard_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GerudoCard_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StoneOfAgony_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StoneOfAgony_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minuet_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bolero_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Serenade_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Requiem_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nocturne_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prelude_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP_3_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP_3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP_2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP_1_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreen_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KokiriBoots_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IronBoots_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoverBoots_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KokiriTunic_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoronTunic_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoraTunic_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuShield_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HylianShield_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MirrorShield_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KokiriSword_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterSword_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigGoronSword_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IronBoots_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoverBoots_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KokiriTunic_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoronTunic_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoraTunic_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KokiriTunic_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuShield_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HylianShield_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MirrorShield_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KokiriSword_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterSword_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigGoronSword_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SilverScale_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoronBracelet_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SilverScale_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoronBracelet_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuStick2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuStick3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuNut2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DekuNut3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bombs2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bombs3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bow2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bow3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slingshot2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slingshot3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FairyOcarina2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hookshot2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoronBracelet2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoronBracelet3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SilverScale2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiver1_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiver2_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiver3_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiver1_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiver2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiver3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeedBag1_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeedBag2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeedBag3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BombBag1_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BombBag2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BombBag3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleVertical_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleMiddle_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade4_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade5_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade6_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade7_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade8_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade9_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade10_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdultTrade11_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade_none_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade3_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade4_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade5_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade6_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade7_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade8_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade9_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade10_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildTrade11_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipmentScreenSingle_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreenSingle_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreen_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreen_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleMiddle_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skulltula_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreen_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreenSingle_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreen_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipmentScreenSingle_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleMiddle_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreenSingle_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipmentScreenSingle_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skulltula_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreenCover_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreenCover_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleScreenCover_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleMiddleCover_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleMiddleCover_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TripleMiddleCover_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipmentScreenCover_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreenCover_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipmentScreenCover_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquipmentScreenCover_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreenCover_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestScreenCover_42.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
